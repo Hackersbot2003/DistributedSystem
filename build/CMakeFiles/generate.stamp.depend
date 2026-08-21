@@ -1,0 +1,63 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Linker/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Linker/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake
+C:/Users/patid/Desktop/distributed-system/CMakeLists.txt
+C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/4.4.2/CMakeCXXCompiler.cmake
+C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/4.4.2/CMakeRCCompiler.cmake
+C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/4.4.2/CMakeSystem.cmake
+C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake
+C:/vcpkg/installed/x64-windows/share/boost/BoostConfigVersion.cmake
+C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake
+C:/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_assert/boost_assert-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_compat/boost_compat-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_compat/boost_compat-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_compat/boost_compat-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_config/boost_config-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_config/boost_config-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_config/boost_config-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_mp11/boost_mp11-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_predef/boost_predef-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_system/boost_system-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_system/boost_system-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_system/boost_system-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_throw_exception/boost_throw_exception-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_variant2/boost_variant2-targets.cmake
+C:/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-config-version.cmake
+C:/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-config.cmake
+C:/vcpkg/installed/x64-windows/share/boost_winapi/boost_winapi-targets.cmake
+C:/vcpkg/scripts/buildsystems/vcpkg.cmake
