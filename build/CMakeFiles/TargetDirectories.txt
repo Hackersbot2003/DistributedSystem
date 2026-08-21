@@ -1,3 +1,0 @@
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/dfs_main.dir
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/ZERO_CHECK.dir
