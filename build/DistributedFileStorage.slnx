@@ -10,6 +10,7 @@
 	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="221a4b29-b180-3d2d-9957-7fe3d2fa6711" DefaultStartup="true">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<BuildDependency Project="dfs_client.vcxproj"/>
+		<BuildDependency Project="dfs_coordinator_test.vcxproj"/>
 		<BuildDependency Project="dfs_server.vcxproj"/>
 		<Build Solution="Debug|*" Project="false"/>
 		<Build Solution="Release|*" Project="false"/>
@@ -18,6 +19,9 @@
 	</Project>
 	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c9d7f17f-278d-34da-ae4c-255fb0e13bfb"/>
 	<Project Path="dfs_client.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1ade1f49-4f84-3214-9510-4668affc998f">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="dfs_coordinator_test.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ec92267a-a509-37b8-8ec7-bd9eea58beb4">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="dfs_server.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e9231b69-74bc-3ff7-a292-2d2b732d84e0">

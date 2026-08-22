@@ -80,9 +80,63 @@ formalize into real tables.
 - Verified full lifecycle: store → verify (OK) → retrieve → byte-match →
   list (1 file) → delete → list (0 files)
 
-**Milestone:** `main.cpp` no longer touches chunking/hashing/metadata
-internals directly — it only calls methods on `StorageNode`. This is the
-object Stage 5 will expose over the network.
+### Stage 5 — Boost.Asio Client/Server File Transfer Protocol ✅
+- Designed a length-prefixed wire protocol (`src/protocol.hpp`):
+  `[1B command][4B payload length][payload]`
+- Commands: `CMD_STORE`, `CMD_RETRIEVE`, `CMD_LIST`, `CMD_DELETE`, `CMD_ERROR`
+  (prefixed with `CMD_` after discovering `ERROR`/`DELETE` collide with
+  Windows SDK macros pulled in transitively via Boost.Asio)
+- Split into two executables: `dfs_server` and `dfs_client`
+  (`dfs_main`/`main.cpp` retired)
+- Server (`src/server.cpp`) uses async `accept` (Stage 1 pattern) +
+  thread-per-connection, looping per session so one TCP connection can
+  carry multiple requests (STORE then RETRIEVE, etc.) rather than closing
+  after a single command
+- Client (`src/client.cpp`) connects once, sends `STORE` then `RETRIEVE`
+  over the same persistent connection
+- Server wraps the Stage 4 `StorageNode` directly — network commands map
+  1:1 onto `store()` / `retrieve()` / `listFiles()` / `deleteFile()`
+- Verified: client uploads a file over real TCP, receives a `fileId`,
+  downloads it back, and the bytes match the original exactly —
+  full network round trip confirmed
+
+**Debugging notes from this stage:**
+- `ERROR`/`DELETE` as raw enum names caused cascading MSVC parse errors
+  due to Windows macro collision — renamed with a `CMD_` prefix
+- Initial version had the server closing the connection after one
+  message while the client expected to reuse it for a second request —
+  fixed by wrapping the server's per-client handler in a loop
+- `LNK1168: cannot open ... for writing` during rebuild — caused by the
+  previous `dfs_server.exe` still running; always stop the server
+  (Ctrl+C) before rebuilding
+
+**Milestone:** the project is no longer local-only — a client and server
+process now exchange real files over TCP, backed by the full
+chunk/hash/metadata pipeline from Stages 2–4.
+
+### Stage 6 — Multiple Storage Nodes ✅
+- `server.cpp` now takes port and data-directory as command-line args
+  (`dfs_server.exe <port> <dataDir>`), so multiple independent instances
+  can run as separate "nodes"
+- Added `src/coordinator.hpp` (`dfs::Coordinator`) — routes files to nodes
+  using round-robin placement, persists the file→node mapping in
+  `placement.json` so retrievals know which node to ask
+- New `dfs_coordinator_test` executable exercising the coordinator against
+  3 real running node processes
+- Verified: 3 nodes (ports 6001/6002/6003) running simultaneously, 4 test
+  files distributed round-robin (file 4 correctly wrapped back to node 0),
+  all retrieved and byte-matched correctly
+
+**Known simplification:** placement currently happens at the *file* level
+(a whole file goes to one node), not the *chunk* level (one file's chunks
+spread across several nodes). True per-chunk distribution needs either
+inter-node communication or per-chunk placement tracking — deferred to a
+later stage once replication (Stage 7) is in place, since the two are
+easier to design together.
+
+**Milestone:** the system is now genuinely distributed — multiple
+independent server processes, each unaware of the others, coordinated by
+a client-side router that knows where everything lives.
 
 ## How to Build
 

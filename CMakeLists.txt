@@ -8,8 +8,9 @@ find_package(Boost CONFIG REQUIRED COMPONENTS system)
 
 add_executable(dfs_server src/server.cpp)
 add_executable(dfs_client src/client.cpp)
+add_executable(dfs_coordinator_test src/coordinator_test.cpp)
 
-foreach(target dfs_server dfs_client)
+foreach(target dfs_server dfs_client dfs_coordinator_test)
     target_include_directories(${target} PRIVATE C:/vcpkg/installed/x64-windows/include)
     target_link_directories(${target} PRIVATE C:/vcpkg/installed/x64-windows/lib)
     target_link_libraries(${target} PRIVATE Boost::system libcrypto)

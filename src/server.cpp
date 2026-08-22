@@ -83,13 +83,20 @@ void handleClient(tcp::socket socket, dfs::StorageNode& node) {
         std::cout << "Client disconnected.\n";  // receiveMessage throws when the client closes — that's expected, not an error
     }
 }
-int main() {
+int main(int argc, char* argv[]) {
     try {
-        dfs::StorageNode node("node_data");
-        boost::asio::io_context io_context;
-        tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 6000));
+        unsigned short port = 6000;
+        std::string dataDir = "node_data";
 
-        std::cout << "Storage node server listening on port 6000...\n";
+        if (argc >= 2) port = static_cast<unsigned short>(std::stoi(argv[1]));
+        if (argc >= 3) dataDir = argv[2];
+
+        dfs::StorageNode node(dataDir);
+        boost::asio::io_context io_context;
+        tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port));
+
+        std::cout << "Storage node server listening on port " << port
+                   << " (data: " << dataDir << ")...\n";
 
         for (;;) {
             tcp::socket socket(io_context);

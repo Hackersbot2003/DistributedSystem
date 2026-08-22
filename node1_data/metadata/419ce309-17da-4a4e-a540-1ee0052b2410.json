@@ -1,0 +1,15 @@
+{
+  "chunks": [
+    {
+      "chunkIndex": 0,
+      "chunkSize": 47,
+      "createdAt": 1787398166,
+      "fileId": "419ce309-17da-4a4e-a540-1ee0052b2410",
+      "fileName": "incoming_coord_test_4.txt",
+      "originalFileSize": 47,
+      "sha256": "8272c6adab37433543758eec27268aa404d108e5c8385bbc9ed00b3eaa47b604",
+      "version": 1
+    }
+  ],
+  "fileId": "419ce309-17da-4a4e-a540-1ee0052b2410"
+}
