@@ -74,14 +74,19 @@ void handleClient(tcp::socket socket, dfs::StorageNode& node) {
                 }
 
                 case CMD_STORE_CHUNK: {
-    uint64_t chunkSize = readUint64(req.payload.data());
-    std::vector<unsigned char> data(req.payload.begin() + 8, req.payload.end());
+    // New payload layout: [4B hashLen][hash string][8B chunkSize][chunk bytes]
+    size_t pos = 0;
+    uint32_t hashLen = readUint32(&req.payload[pos]); pos += 4;
+    std::string hash(req.payload.begin() + pos, req.payload.begin() + pos + hashLen);
+    pos += hashLen;
+    uint64_t chunkSize = readUint64(&req.payload[pos]); pos += 8;
+    std::vector<unsigned char> data(req.payload.begin() + pos, req.payload.end());
 
-    std::string hash = node.storeChunk(data);
+    node.storeChunkAs(hash, data);
 
     std::vector<uint8_t> resp(hash.begin(), hash.end());
     sendMessage(socket, CMD_STORE_CHUNK, resp);
-    std::cout << "Stored chunk " << hash << " (" << chunkSize << " bytes)\n";
+    std::cout << "Stored chunk " << hash << " (" << chunkSize << " encrypted bytes)\n";
     break;
 }
 

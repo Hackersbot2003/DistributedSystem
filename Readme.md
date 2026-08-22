@@ -159,6 +159,32 @@ a client-side router that knows where everything lives.
 **Milestone:** this is the first stage that proves resilience, not just
 correctness — the system now survives losing a node.
 
+### Stage 8 — AES-256-GCM Encryption ✅
+- New `src/crypto.hpp` (`dfs::crypto`): `generateKey()`, `encrypt()`,
+  `decrypt()` using OpenSSL's EVP API with AES-256-GCM (authenticated
+  encryption — detects tampering, not just confidentiality)
+- Each chunk gets a random 12-byte IV; stored format is
+  `[IV][ciphertext][16-byte auth tag]`
+- **Design decision:** hash the plaintext first (stable content identity,
+  survives re-encryption), then encrypt — ciphertext is stored under the
+  plaintext's hash
+- One random AES-256 key generated per file, stored as hex in that file's
+  manifest (`manifests/<fileId>.json`) — flagged as a simplification; a
+  production system would use a proper key management service instead of
+  storing keys alongside metadata
+- `StorageNode::storeChunkAs(hash, data)` added — nodes now store opaque
+  ciphertext under a hash the coordinator provides, since they never see
+  plaintext and can't meaningfully self-hash anymore
+- Protocol's `CMD_STORE_CHUNK` payload extended to carry the hash
+  alongside the chunk bytes
+- Verified: full encrypted distribute → replicate → retrieve → decrypt
+  round trip byte-matched the original file on first build; confirmed by
+  inspecting a `.chunk` file on disk — genuinely opaque binary, not
+  readable plaintext
+
+**Milestone:** data at rest on every node is now encrypted — even a full
+compromise of a single node's disk reveals nothing without the per-file
+key.
 ## How to Build
 
 ```powershell
