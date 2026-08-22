@@ -1,0 +1,15 @@
+{
+  "chunks": [
+    {
+      "chunkIndex": 0,
+      "chunkSize": 850040,
+      "createdAt": 1787397424,
+      "fileId": "3efe5570-cbdc-44e2-8ebf-b998f10bb69e",
+      "fileName": "incoming_client_test.txt",
+      "originalFileSize": 850040,
+      "sha256": "25477908d955468e5497a1e928cf818be2f7e1db54e226834b74ac427d765bdb",
+      "version": 1
+    }
+  ],
+  "fileId": "3efe5570-cbdc-44e2-8ebf-b998f10bb69e"
+}

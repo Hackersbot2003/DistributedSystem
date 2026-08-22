@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.26200 - AMD64
   -
@@ -16,7 +16,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -40,6 +40,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -72,7 +73,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "message-v1"
@@ -80,7 +80,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -90,9 +90,9 @@ events:
       The output was:
       0
       MSBuild version 18.9.1+a81b43525 for .NET Framework
-      Build started 18-08-2026 20:23:24.
+      Build started 22-08-2026 16:36:44.
       
-      Project "C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -108,9 +108,9 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.exe
       AppLocalFromInstalled:
-        "C:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.exe" --installed-bin-dir="C:\\vcpkg\\installed\\x64-windows\\bin" --tlog-file="Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" --copied-files-log="Debug\\vcpkg.applocal.log"
+        "C:\\vcpkg\\vcpkg.exe" z-applocal --target-binary="C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.exe" --installed-bin-dir="C:\\vcpkg\\installed\\x64-windows\\bin" --tlog-file="Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" --copied-files-log="Debug\\vcpkg.applocal.log"
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -118,13 +118,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\4.4.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.40
+      Time Elapsed 00:00:01.87
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -132,7 +132,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/4.4.2/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/4.4.2/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "find-v1"
@@ -141,7 +141,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:102 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -159,6 +159,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -186,10 +187,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -217,10 +218,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -248,7 +249,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
@@ -259,6 +259,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link"
@@ -340,9 +343,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link"
@@ -352,6 +352,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link"
@@ -433,9 +436,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/link.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/link.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/link"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
@@ -447,6 +447,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -479,7 +480,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -488,7 +488,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -506,6 +506,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -533,10 +534,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -564,10 +565,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -595,7 +596,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
@@ -606,6 +606,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lld-link.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lld-link.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lld-link"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lld-link"
@@ -687,9 +690,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lld-link"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -699,6 +699,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lld-link.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lld-link.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lld-link"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lld-link"
@@ -780,9 +783,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/lld-link.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/lld-link.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/lld-link"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -792,6 +792,9 @@ events:
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/lld-link"
       - "C:/Python314/Scripts/lld-link.com"
       - "C:/Python314/Scripts/lld-link.exe"
       - "C:/Python314/Scripts/lld-link"
@@ -873,9 +876,6 @@ events:
       - "C:/mongsh/lld-link.com"
       - "C:/mongsh/lld-link.exe"
       - "C:/mongsh/lld-link"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
     found: false
     search_context:
       CMAKE_PROGRAM_PATH:
@@ -886,6 +886,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -918,14 +919,13 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -943,6 +943,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -970,10 +971,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -1001,10 +1002,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -1032,7 +1033,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
@@ -1043,6 +1043,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/link"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/link"
@@ -1124,9 +1127,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/link"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link"
@@ -1136,6 +1136,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/link"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/link"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/link"
@@ -1217,9 +1220,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/link.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/link.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/link"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
@@ -1231,6 +1231,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -1263,14 +1264,13 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_MT"
     description: "Path to a program."
@@ -1288,6 +1288,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -1315,10 +1316,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -1346,10 +1347,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -1377,7 +1378,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
@@ -1388,6 +1388,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/mt.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/mt.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/mt"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/mt.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/mt.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/mt"
@@ -1469,9 +1472,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/mt.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/mt.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/mt"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
@@ -1481,6 +1481,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/mt.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/mt.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/mt"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/mt.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/mt.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/mt"
@@ -1562,9 +1565,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/mt.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/mt.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/mt"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
@@ -1574,6 +1574,9 @@ events:
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/mt.com"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/mt.exe"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/mt"
       - "C:/Python314/Scripts/mt.com"
       - "C:/Python314/Scripts/mt.exe"
       - "C:/Python314/Scripts/mt"
@@ -1655,9 +1658,6 @@ events:
       - "C:/mongsh/mt.com"
       - "C:/mongsh/mt.exe"
       - "C:/mongsh/mt"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/mt"
     found: false
     search_context:
       CMAKE_PROGRAM_PATH:
@@ -1668,6 +1668,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -1700,14 +1701,13 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -1725,6 +1725,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -1752,10 +1753,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -1783,10 +1784,10 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -1814,7 +1815,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
@@ -1825,6 +1825,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lib.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lib.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/lib"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lib.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lib.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/lib"
@@ -1906,9 +1909,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lib.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lib.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/lib"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib"
@@ -1918,6 +1918,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lib"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lib.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lib.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/lib"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lib.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lib.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/lib"
@@ -1999,9 +2002,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/lib.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/lib.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/lib"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/lib"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
     search_context:
@@ -2013,6 +2013,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -2045,7 +2046,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_FIND_ROOT_PATH: "C:/vcpkg/installed/x64-windows/debug;C:/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -2055,7 +2055,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake:48 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -2079,6 +2079,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/vcpkg/installed/x64-windows/tools/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/"
       - "C:/vcpkg/installed/x64-windows/debug/Windows/System32/"
@@ -2106,7 +2107,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/bin/"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/sbin/"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/"
@@ -2128,6 +2128,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/tools/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/"
       - "C:/vcpkg/installed/x64-windows/Python314/"
       - "C:/vcpkg/installed/x64-windows/Windows/System32/"
@@ -2155,7 +2156,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/vcpkg/installed/x64-windows/Users/patid/go/bin/"
       - "C:/vcpkg/installed/x64-windows/mongsh/"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/vcpkg/installed/x64-windows/Program Files/bin/"
       - "C:/vcpkg/installed/x64-windows/Program Files/sbin/"
       - "C:/vcpkg/installed/x64-windows/Program Files/"
@@ -2177,6 +2177,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/tools/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
       - "C:/Windows/System32/"
@@ -2204,7 +2205,6 @@ events:
       - "C:/Program Files/Android/Android Studio/jbr/bin/"
       - "C:/Users/patid/go/bin/"
       - "C:/mongsh/"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -2245,6 +2245,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/rc.com"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/rc.exe"
+      - "C:/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft/Edge/Application/rc"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/rc.com"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/rc.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Python314/Scripts/rc"
@@ -2326,9 +2329,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/rc.com"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/rc.exe"
       - "C:/vcpkg/installed/x64-windows/debug/mongsh/rc"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
-      - "C:/vcpkg/installed/x64-windows/debug/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/bin/rc.com"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/bin/rc.exe"
       - "C:/vcpkg/installed/x64-windows/debug/Program Files/bin/rc"
@@ -2392,6 +2392,9 @@ events:
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
       - "C:/vcpkg/installed/x64-windows/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/rc.com"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/rc.exe"
+      - "C:/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft/Edge/Application/rc"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/rc.com"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/rc.exe"
       - "C:/vcpkg/installed/x64-windows/Python314/Scripts/rc"
@@ -2473,9 +2476,6 @@ events:
       - "C:/vcpkg/installed/x64-windows/mongsh/rc.com"
       - "C:/vcpkg/installed/x64-windows/mongsh/rc.exe"
       - "C:/vcpkg/installed/x64-windows/mongsh/rc"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
-      - "C:/vcpkg/installed/x64-windows/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc"
       - "C:/vcpkg/installed/x64-windows/Program Files/bin/rc.com"
       - "C:/vcpkg/installed/x64-windows/Program Files/bin/rc.exe"
       - "C:/vcpkg/installed/x64-windows/Program Files/bin/rc"
@@ -2539,6 +2539,9 @@ events:
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
       - "C:/Users/patid/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/rc.com"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/rc.exe"
+      - "C:/Program Files (x86)/Microsoft/Edge/Application/rc"
       - "C:/Python314/Scripts/rc.com"
       - "C:/Python314/Scripts/rc.exe"
       - "C:/Python314/Scripts/rc"
@@ -2620,9 +2623,6 @@ events:
       - "C:/mongsh/rc.com"
       - "C:/mongsh/rc.exe"
       - "C:/mongsh/rc"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
-      - "C:/Users/patid/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/rc"
       - "C:/Program Files/bin/rc.com"
       - "C:/Program Files/bin/rc.exe"
       - "C:/Program Files/bin/rc"
@@ -2669,6 +2669,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -2701,7 +2702,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -2714,12 +2714,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd"
-      binary: "C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd"
+      source: "C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye"
+      binary: "C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -2734,39 +2734,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: 'C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd'
+        Change Dir: 'C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_46f34.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_88a30.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.9.1+a81b43525 for .NET Framework
-        Build started 18-08-2026 20:23:26.
+        Build started 22-08-2026 16:36:47.
         
-        Project "C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\cmTC_46f34.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\cmTC_88a30.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\Debug\\".
-          Creating directory "cmTC_46f34.dir\\Debug\\cmTC_46f34.tlog\\".
+          Creating directory "C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\Debug\\".
+          Creating directory "cmTC_88a30.dir\\Debug\\cmTC_88a30.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_46f34.dir\\Debug\\cmTC_46f34.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_46f34.dir\\Debug\\cmTC_46f34.tlog\\unsuccessfulbuild".
+          Creating "cmTC_88a30.dir\\Debug\\cmTC_88a30.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_88a30.dir\\Debug\\cmTC_88a30.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_46f34.dir\\Debug\\\\" /Fd"cmTC_46f34.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_88a30.dir\\Debug\\\\" /Fd"cmTC_88a30.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36256 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_46f34.dir\\Debug\\\\" /Fd"cmTC_46f34.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_88a30.dir\\Debug\\\\" /Fd"cmTC_88a30.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\Debug\\cmTC_46f34.exe" /INCREMENTAL /ILK:"cmTC_46f34.dir\\Debug\\cmTC_46f34.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd/Debug/cmTC_46f34.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd/Debug/cmTC_46f34.lib" /MACHINE:X64  /machine:x64 cmTC_46f34.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_46f34.vcxproj -> C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\Debug\\cmTC_46f34.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\Debug\\cmTC_88a30.exe" /INCREMENTAL /ILK:"cmTC_88a30.dir\\Debug\\cmTC_88a30.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye/Debug/cmTC_88a30.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye/Debug/cmTC_88a30.lib" /MACHINE:X64  /machine:x64 cmTC_88a30.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_88a30.vcxproj -> C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\Debug\\cmTC_88a30.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_46f34.dir\\Debug\\cmTC_46f34.tlog\\unsuccessfulbuild".
-          Touching "cmTC_46f34.dir\\Debug\\cmTC_46f34.tlog\\cmTC_46f34.lastbuildstate".
-        Done Building Project "C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\cmTC_46f34.vcxproj" (default targets).
+          Deleting file "cmTC_88a30.dir\\Debug\\cmTC_88a30.tlog\\unsuccessfulbuild".
+          Touching "cmTC_88a30.dir\\Debug\\cmTC_88a30.tlog\\cmTC_88a30.lastbuildstate".
+        Done Building Project "C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\cmTC_88a30.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.85
+        Time Elapsed 00:00:01.22
         
       exitCode: 0
   -
@@ -2774,12 +2774,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        link line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\patid\\Desktop\\distributed-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-samlkd\\Debug\\cmTC_46f34.exe" /INCREMENTAL /ILK:"cmTC_46f34.dir\\Debug\\cmTC_46f34.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd/Debug/cmTC_46f34.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/CMakeScratch/TryCompile-samlkd/Debug/cmTC_46f34.lib" /MACHINE:X64  /machine:x64 cmTC_46f34.dir\\Debug\\CMakeCXXCompilerABI.obj] ==> linker [C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
+        link line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\patid\\Desktop\\DistributedSystem\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nupdye\\Debug\\cmTC_88a30.exe" /INCREMENTAL /ILK:"cmTC_88a30.dir\\Debug\\cmTC_88a30.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye/Debug/cmTC_88a30.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/CMakeScratch/TryCompile-nupdye/Debug/cmTC_88a30.lib" /MACHINE:X64  /machine:x64 cmTC_88a30.dir\\Debug\\CMakeCXXCompilerABI.obj] ==> linker [C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
         linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
         implicit libs: []
         implicit objs: []
@@ -2793,7 +2793,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.51.36256.0
@@ -2806,7 +2806,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:97 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_headers"
     configs:
       -
@@ -2908,6 +2908,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -2940,7 +2941,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -2964,7 +2964,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_config"
     configs:
       -
@@ -3066,6 +3066,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3098,7 +3099,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3118,7 +3118,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_assert"
     configs:
       -
@@ -3220,6 +3220,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3252,7 +3253,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3276,7 +3276,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_throw_exception"
     configs:
       -
@@ -3378,6 +3378,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3410,7 +3411,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3430,7 +3430,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_compat"
     configs:
       -
@@ -3532,6 +3532,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3564,7 +3565,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3588,7 +3588,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_mp11"
     configs:
       -
@@ -3690,6 +3690,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3722,7 +3723,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3742,7 +3742,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_variant2"
     configs:
       -
@@ -3844,6 +3844,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -3876,7 +3877,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3900,7 +3900,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_predef"
     configs:
       -
@@ -4002,6 +4002,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -4034,7 +4035,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4054,7 +4054,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_winapi"
     configs:
       -
@@ -4156,6 +4156,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -4188,7 +4189,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4204,7 +4204,7 @@ events:
       - "C:/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake:128 (boostcfg_find_component)"
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "boost_system"
     configs:
       -
@@ -4306,6 +4306,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -4338,7 +4339,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4351,7 +4351,7 @@ events:
     backtrace:
       - "C:/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (include)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
     name: "Boost"
     components:
       -
@@ -5325,6 +5325,7 @@ events:
       ENV{PATH}:
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
         - "c:\\Users\\patid\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
         - "C:\\Python314\\Scripts\\"
         - "C:\\Python314\\"
         - "C:\\WINDOWS\\system32"
@@ -5357,7 +5358,6 @@ events:
         - "C:\\Program Files\\Android\\Android Studio\\jbr\\bin"
         - "C:\\Users\\patid\\go\\bin"
         - "C:\\mongsh\\"
-        - "c:\\Users\\patid\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DistributedFileStorage"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"

@@ -1,3 +1,4 @@
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/dfs_main.dir
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/patid/Desktop/distributed-system/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/dfs_server.dir
+C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/dfs_client.dir
+C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/patid/Desktop/DistributedSystem/build/CMakeFiles/ZERO_CHECK.dir

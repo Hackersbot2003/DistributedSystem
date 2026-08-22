@@ -2,13 +2,16 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\patid\Desktop\distributed-system\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\patid\Desktop\DistributedSystem\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\patid\Desktop\distributed-system\build\Debug\dfs_main.exe</FullPath>
+      <FullPath>C:\Users\patid\Desktop\DistributedSystem\build\Debug\dfs_client.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\patid\Desktop\distributed-system\build\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>C:\Users\patid\Desktop\DistributedSystem\build\Debug\dfs_server.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\patid\Desktop\DistributedSystem\build\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

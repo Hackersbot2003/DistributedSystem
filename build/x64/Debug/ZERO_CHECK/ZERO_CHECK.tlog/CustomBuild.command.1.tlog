@@ -1,6 +1,6 @@
-^C:\USERS\PATID\DESKTOP\DISTRIBUTED-SYSTEM\BUILD\CMAKEFILES\A436B6D64E61A21FC70CDE3A087E7345\GENERATE.STAMP.RULE
+^C:\USERS\PATID\DESKTOP\DISTRIBUTEDSYSTEM\BUILD\CMAKEFILES\97E2633838ACAA16FA18C554A7A17372\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/patid/Desktop/distributed-system -BC:/Users/patid/Desktop/distributed-system/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/patid/Desktop/distributed-system/build/DistributedFileStorage.slnx
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/patid/Desktop/DistributedSystem -BC:/Users/patid/Desktop/DistributedSystem/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/patid/Desktop/DistributedSystem/build/DistributedFileStorage.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
