@@ -138,6 +138,27 @@ easier to design together.
 independent server processes, each unaware of the others, coordinated by
 a client-side router that knows where everything lives.
 
+### Stage 7 — Chunk-Level Distribution + Replication ✅
+- Rewrote the coordinator to distribute individual **chunks** across nodes
+  (not whole files) — true per-chunk distribution
+- Each chunk is sent to a **primary** node and a **replica** node
+  (replica = next node in the rotation), so no single node loss loses data
+- New protocol commands: `CMD_STORE_CHUNK`, `CMD_RETRIEVE_CHUNK`
+- `StorageNode` gained `storeChunk()` / `retrieveChunk()` for raw
+  hash-addressed chunk storage
+- Per-file manifests (`manifests/<fileId>.json`) record each chunk's index,
+  hash, primary node, and replica node
+- Retrieval logic: try the primary node; on connection failure,
+  automatically fall back to the replica
+- **Fault tolerance verified directly:** killed the port-6001 node process
+  entirely mid-session, then retrieved a file whose chunks 0 and 3 had
+  that node as primary — retrieval correctly fell back to the replica
+  node for those chunks and reassembled a byte-perfect file
+  (`fc` confirmed no differences)
+
+**Milestone:** this is the first stage that proves resilience, not just
+correctness — the system now survives losing a node.
+
 ## How to Build
 
 ```powershell

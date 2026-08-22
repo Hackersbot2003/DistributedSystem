@@ -1,0 +1,40 @@
+{
+  "chunks": [
+    {
+      "hash": "16d8a24ca11e0f762ffc4c1b78d367440082183d489950f2db450516aac9d3ce",
+      "index": 0,
+      "primaryNode": 0,
+      "replicaNode": 1,
+      "size": 1048576
+    },
+    {
+      "hash": "4bd424e6575d6beadd9031788d7d2243eeff366e36e438a7aabf9be70699be6f",
+      "index": 1,
+      "primaryNode": 1,
+      "replicaNode": 2,
+      "size": 1048576
+    },
+    {
+      "hash": "2990f878aaf3e0c5b4e45cdfdbbcab14134a5bbc1e49ab247aa7a0e0497d614a",
+      "index": 2,
+      "primaryNode": 2,
+      "replicaNode": 0,
+      "size": 1048576
+    },
+    {
+      "hash": "eaf564ae92c458e02bd38d6da6db73204017fb7aeadb325b1abea9e68b5005d9",
+      "index": 3,
+      "primaryNode": 0,
+      "replicaNode": 1,
+      "size": 1048576
+    },
+    {
+      "hash": "5a6a5a89b05c42c9399ac362e7847cad3e8ed1b26a5cc3f75db1386525b47352",
+      "index": 4,
+      "primaryNode": 1,
+      "replicaNode": 2,
+      "size": 405696
+    }
+  ],
+  "fileId": "0973523d-1154-4f72-b968-766293d7a3ea"
+}

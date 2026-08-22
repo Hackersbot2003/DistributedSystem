@@ -59,6 +59,26 @@ public:
         std::filesystem::remove(metadataDir_ + "/" + fileId + ".json");
     }
 
+    // Stores a raw chunk (server computes the hash itself)
+std::string storeChunk(const std::vector<unsigned char>& data) {
+    std::string hash = sha256Hex(data.data(), data.size());
+    std::ofstream out(chunkDir_ + "/" + hash + ".chunk", std::ios::binary);
+    out.write(reinterpret_cast<const char*>(data.data()), data.size());
+    return hash;
+}
+
+// Retrieves a raw chunk by hash
+std::vector<unsigned char> retrieveChunk(const std::string& hash) {
+    std::string path = chunkDir_ + "/" + hash + ".chunk";
+    if (!std::filesystem::exists(path))
+        throw std::runtime_error("Chunk not found: " + hash);
+
+    std::ifstream in(path, std::ios::binary);
+    std::vector<unsigned char> data(std::filesystem::file_size(path));
+    in.read(reinterpret_cast<char*>(data.data()), data.size());
+    return data;
+}
+
     std::vector<std::string> listFiles() {
         std::vector<std::string> ids;
         for (const auto& entry : std::filesystem::directory_iterator(metadataDir_)) {

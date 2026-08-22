@@ -73,6 +73,31 @@ void handleClient(tcp::socket socket, dfs::StorageNode& node) {
                     break;
                 }
 
+                case CMD_STORE_CHUNK: {
+    uint64_t chunkSize = readUint64(req.payload.data());
+    std::vector<unsigned char> data(req.payload.begin() + 8, req.payload.end());
+
+    std::string hash = node.storeChunk(data);
+
+    std::vector<uint8_t> resp(hash.begin(), hash.end());
+    sendMessage(socket, CMD_STORE_CHUNK, resp);
+    std::cout << "Stored chunk " << hash << " (" << chunkSize << " bytes)\n";
+    break;
+}
+
+case CMD_RETRIEVE_CHUNK: {
+    std::string hash(req.payload.begin(), req.payload.end());
+    auto data = node.retrieveChunk(hash);
+
+    std::vector<uint8_t> resp;
+    writeUint64(resp, data.size());
+    resp.insert(resp.end(), data.begin(), data.end());
+
+    sendMessage(socket, CMD_RETRIEVE_CHUNK, resp);
+    std::cout << "Sent chunk " << hash << "\n";
+    break;
+}
+
                 default: {
                     std::string msg = "Unknown command";
                     sendMessage(socket, CMD_ERROR, std::vector<uint8_t>(msg.begin(), msg.end()));

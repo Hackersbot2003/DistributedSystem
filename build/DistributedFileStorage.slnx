@@ -11,6 +11,7 @@
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<BuildDependency Project="dfs_client.vcxproj"/>
 		<BuildDependency Project="dfs_coordinator_test.vcxproj"/>
+		<BuildDependency Project="dfs_retrieve_test.vcxproj"/>
 		<BuildDependency Project="dfs_server.vcxproj"/>
 		<Build Solution="Debug|*" Project="false"/>
 		<Build Solution="Release|*" Project="false"/>
@@ -22,6 +23,9 @@
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="dfs_coordinator_test.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ec92267a-a509-37b8-8ec7-bd9eea58beb4">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="dfs_retrieve_test.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9ee2a598-e9db-3638-8c21-ded69b9efcac">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="dfs_server.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e9231b69-74bc-3ff7-a292-2d2b732d84e0">

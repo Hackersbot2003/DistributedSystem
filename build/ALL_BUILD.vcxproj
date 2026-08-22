@@ -182,6 +182,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{EC92267A-A509-37B8-8EC7-BD9EEA58BEB4}</Project>
       <Name>dfs_coordinator_test</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\patid\Desktop\DistributedSystem\build\dfs_retrieve_test.vcxproj">
+      <Project>{9EE2A598-E9DB-3638-8C21-DED69B9EFCAC}</Project>
+      <Name>dfs_retrieve_test</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\patid\Desktop\DistributedSystem\build\dfs_server.vcxproj">
       <Project>{E9231B69-74BC-3FF7-A292-2D2B732D84E0}</Project>
       <Name>dfs_server</Name>

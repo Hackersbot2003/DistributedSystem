@@ -1,12 +1,13 @@
 #pragma once
 #include "protocol.hpp"
+#include "chunker.hpp"
 #include <boost/asio.hpp>
 #include <vector>
 #include <string>
 #include <fstream>
+#include <iostream>
 #include <filesystem>
 #include <nlohmann/json.hpp>
-#include <iostream>   
 
 using boost::asio::ip::tcp;
 using namespace dfs::protocol;
@@ -18,93 +19,136 @@ struct NodeAddress {
     unsigned short port;
 };
 
-// Round-robin placement: chunk N goes to node (N % numNodes)
+struct ChunkPlacement {
+    uint64_t index;
+    std::string hash;
+    uint64_t size;
+    size_t primaryNode;
+    size_t replicaNode;
+};
+
 class Coordinator {
 public:
     explicit Coordinator(std::vector<NodeAddress> nodes)
         : nodes_(std::move(nodes)) {}
 
-    // Splits inputFile into chunks and distributes them round-robin across nodes.
-    // Returns the fileId assigned by each node's STORE call, plus a placement
-    // map of chunkIndex -> which node holds it, saved as coordinator metadata.
     std::string distributeFile(const std::string& inputFilePath) {
-        // For simplicity at this stage: chunk locally first (reusing chunker.hpp
-        // logic indirectly isn't wired up yet) — instead, we send the WHOLE file
-        // to whichever node is "up next" in round-robin. True per-chunk splitting
-        // across nodes comes once nodes can talk to each other (Stage 7+).
-        // This stage's goal: prove a coordinator can route different FILES to
-        // different nodes, and track which node holds which file.
+        std::string fileId = generateFileId();
+        std::string tempChunkDir = "coord_temp_chunks";
 
-        size_t nodeIndex = nextNode_;
-        nextNode_ = (nextNode_ + 1) % nodes_.size();
+        // Reuse existing chunking logic to split + hash locally first
+        auto chunkMeta = chunkFileWithMetadata(inputFilePath, tempChunkDir, fileId);
 
-        auto& target = nodes_[nodeIndex];
-        boost::asio::io_context io;
-        tcp::socket socket(io);
-        socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
+        std::vector<ChunkPlacement> placements;
 
-        std::string filename = std::filesystem::path(inputFilePath).filename().string();
-        uint64_t fileSize = std::filesystem::file_size(inputFilePath);
+        for (const auto& chunk : chunkMeta) {
+            size_t primary = nextNode_;
+            size_t replica = (nextNode_ + 1) % nodes_.size();
+            nextNode_ = (nextNode_ + 1) % nodes_.size();
 
-        std::vector<uint8_t> payload;
-        writeUint32(payload, static_cast<uint32_t>(filename.size()));
-        payload.insert(payload.end(), filename.begin(), filename.end());
-        writeUint64(payload, fileSize);
+            std::ifstream in(tempChunkDir + "/" + chunk.sha256 + ".chunk", std::ios::binary);
+            std::vector<unsigned char> data(chunk.chunkSize);
+            in.read(reinterpret_cast<char*>(data.data()), chunk.chunkSize);
 
-        size_t offset = payload.size();
-        payload.resize(offset + fileSize);
-        std::ifstream in(inputFilePath, std::ios::binary);
-        in.read(reinterpret_cast<char*>(payload.data() + offset), fileSize);
+            sendChunkToNode(primary, data);
+            sendChunkToNode(replica, data);
 
-        sendMessage(socket, CMD_STORE, payload);
-        Message resp = receiveMessage(socket);
-        std::string fileId(resp.payload.begin(), resp.payload.end());
+            placements.push_back({chunk.chunkIndex, chunk.sha256, chunk.chunkSize, primary, replica});
 
-        recordPlacement(fileId, nodeIndex);
-        std::cout << "Routed '" << filename << "' -> node " << nodeIndex
-                   << " (port " << target.port << "), fileId=" << fileId << "\n";
+            std::cout << "Chunk " << chunk.chunkIndex << " (" << chunk.sha256.substr(0, 8)
+                       << "...) -> primary node " << primary << ", replica node " << replica << "\n";
+        }
+
+        saveManifest(fileId, placements);
+        std::filesystem::remove_all(tempChunkDir);
 
         return fileId;
     }
 
     void retrieveFile(const std::string& fileId, const std::string& outputPath) {
-        size_t nodeIndex = lookupPlacement(fileId);
-        auto& target = nodes_[nodeIndex];
+        auto placements = loadManifest(fileId);
 
-        boost::asio::io_context io;
-        tcp::socket socket(io);
-        socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
-
-        std::vector<uint8_t> payload(fileId.begin(), fileId.end());
-        sendMessage(socket, CMD_RETRIEVE, payload);
-
-        Message resp = receiveMessage(socket);
-        uint64_t fileSize = readUint64(resp.payload.data());
+        // Sort by chunk index to reassemble in correct order
+        std::sort(placements.begin(), placements.end(),
+                  [](const ChunkPlacement& a, const ChunkPlacement& b) { return a.index < b.index; });
 
         std::ofstream out(outputPath, std::ios::binary);
-        out.write(reinterpret_cast<const char*>(resp.payload.data() + 8), fileSize);
 
-        std::cout << "Retrieved fileId=" << fileId << " from node " << nodeIndex << "\n";
+        for (const auto& p : placements) {
+            std::vector<unsigned char> data;
+            try {
+                data = fetchChunkFromNode(p.primaryNode, p.hash);
+                std::cout << "Chunk " << p.index << " fetched from primary node " << p.primaryNode << "\n";
+            } catch (std::exception&) {
+                std::cout << "Primary node " << p.primaryNode << " failed for chunk " << p.index
+                           << ", falling back to replica node " << p.replicaNode << "\n";
+                data = fetchChunkFromNode(p.replicaNode, p.hash);
+            }
+            out.write(reinterpret_cast<const char*>(data.data()), data.size());
+        }
     }
 
 private:
     std::vector<NodeAddress> nodes_;
     size_t nextNode_ = 0;
 
-    void recordPlacement(const std::string& fileId, size_t nodeIndex) {
+    void sendChunkToNode(size_t nodeIndex, const std::vector<unsigned char>& data) {
+        auto& target = nodes_[nodeIndex];
+        boost::asio::io_context io;
+        tcp::socket socket(io);
+        socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
+
+        std::vector<uint8_t> payload;
+        writeUint64(payload, data.size());
+        payload.insert(payload.end(), data.begin(), data.end());
+
+        sendMessage(socket, CMD_STORE_CHUNK, payload);
+        receiveMessage(socket); // response is the hash; we already know it, just consume it
+    }
+
+    std::vector<unsigned char> fetchChunkFromNode(size_t nodeIndex, const std::string& hash) {
+        auto& target = nodes_[nodeIndex];
+        boost::asio::io_context io;
+        tcp::socket socket(io);
+        socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
+
+        std::vector<uint8_t> payload(hash.begin(), hash.end());
+        sendMessage(socket, CMD_RETRIEVE_CHUNK, payload);
+
+        Message resp = receiveMessage(socket);
+        uint64_t size = readUint64(resp.payload.data());
+        return std::vector<unsigned char>(resp.payload.begin() + 8, resp.payload.begin() + 8 + size);
+    }
+
+    void saveManifest(const std::string& fileId, const std::vector<ChunkPlacement>& placements) {
+        std::filesystem::create_directories("manifests");
         nlohmann::json j;
-        std::ifstream in("placement.json");
-        if (in) in >> j;
-        j[fileId] = nodeIndex;
-        std::ofstream out("placement.json");
+        j["fileId"] = fileId;
+        j["chunks"] = nlohmann::json::array();
+        for (const auto& p : placements) {
+            j["chunks"].push_back({
+                {"index", p.index}, {"hash", p.hash}, {"size", p.size},
+                {"primaryNode", p.primaryNode}, {"replicaNode", p.replicaNode}
+            });
+        }
+        std::ofstream out("manifests/" + fileId + ".json");
         out << j.dump(2);
     }
 
-    size_t lookupPlacement(const std::string& fileId) {
-        std::ifstream in("placement.json");
+    std::vector<ChunkPlacement> loadManifest(const std::string& fileId) {
+        std::ifstream in("manifests/" + fileId + ".json");
+        if (!in) throw std::runtime_error("No manifest for fileId: " + fileId);
         nlohmann::json j;
         in >> j;
-        return j.at(fileId).get<size_t>();
+
+        std::vector<ChunkPlacement> placements;
+        for (const auto& c : j["chunks"]) {
+            placements.push_back({
+                c["index"].get<uint64_t>(), c["hash"].get<std::string>(), c["size"].get<uint64_t>(),
+                c["primaryNode"].get<size_t>(), c["replicaNode"].get<size_t>()
+            });
+        }
+        return placements;
     }
 };
 

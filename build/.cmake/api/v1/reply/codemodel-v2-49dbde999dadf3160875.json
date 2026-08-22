@@ -1,0 +1,912 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::assert::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__assert-Debug-344f66361e8d4fcc699f.json",
+					"name" : "Boost::assert",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::boost::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__boost-Debug-8dc35b258fa1ed055687.json",
+					"name" : "Boost::boost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::compat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__compat-Debug-cd1fa53e579cb9060834.json",
+					"name" : "Boost::compat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__config-Debug-6c7c3017b46ae0cc3676.json",
+					"name" : "Boost::config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::diagnostic_definitions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__diagnostic_definitions-Debug-01881f6da9f9d6b5de9a.json",
+					"name" : "Boost::diagnostic_definitions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::disable_autolinking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__disable_autolinking-Debug-eb8da54a5917c6c67906.json",
+					"name" : "Boost::disable_autolinking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::dynamic_linking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__dynamic_linking-Debug-310b0a983f742b6313a2.json",
+					"name" : "Boost::dynamic_linking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__headers-Debug-56b90db16aefbf5cfd0d.json",
+					"name" : "Boost::headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::mp11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__mp11-Debug-0aef672123dbd7650615.json",
+					"name" : "Boost::mp11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::predef::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__predef-Debug-6ef308043ba57c6b96e5.json",
+					"name" : "Boost::predef",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__system-Debug-36d3ffce6683a9cb0f0c.json",
+					"name" : "Boost::system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::throw_exception::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__throw_exception-Debug-f2497d7da1fede5b4816.json",
+					"name" : "Boost::throw_exception",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::variant2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__variant2-Debug-455247bc53bb3375c068.json",
+					"name" : "Boost::variant2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::winapi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__winapi-Debug-4542142b88dd39d19f41.json",
+					"name" : "Boost::winapi",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DistributedFileStorage",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-6b34296fda105a2ba2bd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-8d9a5958316340de704d.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_client-Debug-d7c21486de6c3dd43828.json",
+					"name" : "dfs_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_coordinator_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_coordinator_test-Debug-a9b86077714e29db4ed8.json",
+					"name" : "dfs_coordinator_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_retrieve_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_retrieve_test-Debug-645a0346baa139eb7060.json",
+					"name" : "dfs_retrieve_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_server-Debug-3a1329c88f38a334b428.json",
+					"name" : "dfs_server",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::assert::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__assert-Release-344f66361e8d4fcc699f.json",
+					"name" : "Boost::assert",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::boost::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__boost-Release-8dc35b258fa1ed055687.json",
+					"name" : "Boost::boost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::compat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__compat-Release-cd1fa53e579cb9060834.json",
+					"name" : "Boost::compat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__config-Release-6c7c3017b46ae0cc3676.json",
+					"name" : "Boost::config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::diagnostic_definitions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__diagnostic_definitions-Release-01881f6da9f9d6b5de9a.json",
+					"name" : "Boost::diagnostic_definitions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::disable_autolinking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__disable_autolinking-Release-eb8da54a5917c6c67906.json",
+					"name" : "Boost::disable_autolinking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::dynamic_linking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__dynamic_linking-Release-310b0a983f742b6313a2.json",
+					"name" : "Boost::dynamic_linking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__headers-Release-56b90db16aefbf5cfd0d.json",
+					"name" : "Boost::headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::mp11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__mp11-Release-0aef672123dbd7650615.json",
+					"name" : "Boost::mp11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::predef::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__predef-Release-6ef308043ba57c6b96e5.json",
+					"name" : "Boost::predef",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__system-Release-36d3ffce6683a9cb0f0c.json",
+					"name" : "Boost::system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::throw_exception::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__throw_exception-Release-f2497d7da1fede5b4816.json",
+					"name" : "Boost::throw_exception",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::variant2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__variant2-Release-455247bc53bb3375c068.json",
+					"name" : "Boost::variant2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::winapi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__winapi-Release-4542142b88dd39d19f41.json",
+					"name" : "Boost::winapi",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DistributedFileStorage",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-6b34296fda105a2ba2bd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-8d9a5958316340de704d.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_client-Release-dfdc6c736533f61d268a.json",
+					"name" : "dfs_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_coordinator_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_coordinator_test-Release-23afa41df945db7a745f.json",
+					"name" : "dfs_coordinator_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_retrieve_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_retrieve_test-Release-dd89c608f30e28e61e3a.json",
+					"name" : "dfs_retrieve_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_server-Release-d9469cf28ed9dfc36cd6.json",
+					"name" : "dfs_server",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::assert::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__assert-MinSizeRel-344f66361e8d4fcc699f.json",
+					"name" : "Boost::assert",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::boost::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__boost-MinSizeRel-8dc35b258fa1ed055687.json",
+					"name" : "Boost::boost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::compat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__compat-MinSizeRel-cd1fa53e579cb9060834.json",
+					"name" : "Boost::compat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__config-MinSizeRel-6c7c3017b46ae0cc3676.json",
+					"name" : "Boost::config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::diagnostic_definitions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__diagnostic_definitions-MinSizeRel-01881f6da9f9d6b5de9a.json",
+					"name" : "Boost::diagnostic_definitions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::disable_autolinking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__disable_autolinking-MinSizeRel-eb8da54a5917c6c67906.json",
+					"name" : "Boost::disable_autolinking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::dynamic_linking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__dynamic_linking-MinSizeRel-310b0a983f742b6313a2.json",
+					"name" : "Boost::dynamic_linking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__headers-MinSizeRel-56b90db16aefbf5cfd0d.json",
+					"name" : "Boost::headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::mp11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__mp11-MinSizeRel-0aef672123dbd7650615.json",
+					"name" : "Boost::mp11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::predef::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__predef-MinSizeRel-6ef308043ba57c6b96e5.json",
+					"name" : "Boost::predef",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__system-MinSizeRel-36d3ffce6683a9cb0f0c.json",
+					"name" : "Boost::system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::throw_exception::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__throw_exception-MinSizeRel-f2497d7da1fede5b4816.json",
+					"name" : "Boost::throw_exception",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::variant2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__variant2-MinSizeRel-455247bc53bb3375c068.json",
+					"name" : "Boost::variant2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::winapi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__winapi-MinSizeRel-4542142b88dd39d19f41.json",
+					"name" : "Boost::winapi",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-MinSizeRel-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DistributedFileStorage",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-6b34296fda105a2ba2bd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-8d9a5958316340de704d.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_client-MinSizeRel-725764f234a03eab4389.json",
+					"name" : "dfs_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_coordinator_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_coordinator_test-MinSizeRel-e23188cdd2d68d919b03.json",
+					"name" : "dfs_coordinator_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_retrieve_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_retrieve_test-MinSizeRel-74d22659862e3f500646.json",
+					"name" : "dfs_retrieve_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_server-MinSizeRel-13d84d750a560ddee8b8.json",
+					"name" : "dfs_server",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::assert::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__assert-RelWithDebInfo-344f66361e8d4fcc699f.json",
+					"name" : "Boost::assert",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::boost::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__boost-RelWithDebInfo-8dc35b258fa1ed055687.json",
+					"name" : "Boost::boost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::compat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__compat-RelWithDebInfo-cd1fa53e579cb9060834.json",
+					"name" : "Boost::compat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__config-RelWithDebInfo-6c7c3017b46ae0cc3676.json",
+					"name" : "Boost::config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::diagnostic_definitions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__diagnostic_definitions-RelWithDebInfo-01881f6da9f9d6b5de9a.json",
+					"name" : "Boost::diagnostic_definitions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::disable_autolinking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__disable_autolinking-RelWithDebInfo-eb8da54a5917c6c67906.json",
+					"name" : "Boost::disable_autolinking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::dynamic_linking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__dynamic_linking-RelWithDebInfo-310b0a983f742b6313a2.json",
+					"name" : "Boost::dynamic_linking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__headers-RelWithDebInfo-56b90db16aefbf5cfd0d.json",
+					"name" : "Boost::headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::mp11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__mp11-RelWithDebInfo-0aef672123dbd7650615.json",
+					"name" : "Boost::mp11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::predef::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__predef-RelWithDebInfo-6ef308043ba57c6b96e5.json",
+					"name" : "Boost::predef",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__system-RelWithDebInfo-36d3ffce6683a9cb0f0c.json",
+					"name" : "Boost::system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::throw_exception::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__throw_exception-RelWithDebInfo-f2497d7da1fede5b4816.json",
+					"name" : "Boost::throw_exception",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::variant2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__variant2-RelWithDebInfo-455247bc53bb3375c068.json",
+					"name" : "Boost::variant2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Boost::winapi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Boost__winapi-RelWithDebInfo-4542142b88dd39d19f41.json",
+					"name" : "Boost::winapi",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-RelWithDebInfo-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DistributedFileStorage",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-6b34296fda105a2ba2bd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-8d9a5958316340de704d.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_client-RelWithDebInfo-3d8040b28e92553bbb91.json",
+					"name" : "dfs_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_coordinator_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_coordinator_test-RelWithDebInfo-adadb87ff10996c410e5.json",
+					"name" : "dfs_coordinator_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_retrieve_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_retrieve_test-RelWithDebInfo-03e63f48ea8b67239fcc.json",
+					"name" : "dfs_retrieve_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_server-RelWithDebInfo-a5bc99f9d5b71a7bda7d.json",
+					"name" : "dfs_server",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/patid/Desktop/DistributedSystem/build",
+		"source" : "C:/Users/patid/Desktop/DistributedSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

@@ -12,6 +12,8 @@ enum Command : uint8_t {
     CMD_RETRIEVE = 2,
     CMD_LIST = 3,
     CMD_DELETE = 4,
+    CMD_STORE_CHUNK = 5,
+    CMD_RETRIEVE_CHUNK = 6,
     CMD_ERROR = 255
 };
 
