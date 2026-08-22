@@ -185,6 +185,25 @@ correctness — the system now survives losing a node.
 **Milestone:** data at rest on every node is now encrypted — even a full
 compromise of a single node's disk reveals nothing without the per-file
 key.
+
+### Stage 9 — Zstd Compression ✅
+- New `src/compress.hpp` (`dfs::compress`) wrapping `ZSTD_compress` /
+  `ZSTD_decompress` (level 3, Zstd's own default balance of speed/ratio)
+- Pipeline finalized: **hash plaintext → compress → encrypt** on the way
+  in, **decrypt → decompress → verify hash** on the way out — compression
+  must happen before encryption, since encrypted (high-entropy) data
+  doesn't compress
+- `ChunkPlacement` gained `originalSize` (pre-compression byte count),
+  persisted in the manifest — Zstd's basic decompress API needs the exact
+  output size up front
+- Verified: full distribute → replicate → retrieve → decrypt → decompress
+  → integrity-check round trip, byte-perfect match. Highly repetitive test
+  data (~1MB chunks of repeated text) compressed down to ~150 bytes per
+  chunk — dramatic, if unrealistic-for-real-data, proof the stage works
+
+**Milestone:** the full resume-spec pipeline — chunking, SHA-256 integrity,
+AES-256-GCM encryption, Zstd compression, Boost.Asio networking, chunk-level
+distribution, and replication — is now complete and verified end to end.
 ## How to Build
 
 ```powershell

@@ -1,13 +1,15 @@
 #pragma once
 #include "protocol.hpp"
 #include "chunker.hpp"
-#include "crypto.hpp"          // add this
+#include "crypto.hpp"
+#include "compress.hpp"
 #include <boost/asio.hpp>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <filesystem>
+#include <algorithm>
 #include <nlohmann/json.hpp>
 
 using boost::asio::ip::tcp;
@@ -22,8 +24,8 @@ struct NodeAddress {
 
 struct ChunkPlacement {
     uint64_t index;
-    std::string hash;       // hash of PLAINTEXT chunk (stable identity)
-    uint64_t size;           // plaintext size
+    std::string hash;         // hash of RAW plaintext (stable identity)
+    uint64_t originalSize;    // size BEFORE compression — needed to decompress
     size_t primaryNode;
     size_t replicaNode;
 };
@@ -39,7 +41,7 @@ public:
 
         auto chunkMeta = chunkFileWithMetadata(inputFilePath, tempChunkDir, fileId);
 
-        crypto::Key fileKey = crypto::generateKey();  // one key per file
+        crypto::Key fileKey = crypto::generateKey();
 
         std::vector<ChunkPlacement> placements;
 
@@ -48,21 +50,23 @@ public:
             size_t replica = (nextNode_ + 1) % nodes_.size();
             nextNode_ = (nextNode_ + 1) % nodes_.size();
 
-            // Read plaintext chunk (hash already computed against this by chunkFileWithMetadata)
             std::ifstream in(tempChunkDir + "/" + chunk.sha256 + ".chunk", std::ios::binary);
             std::vector<unsigned char> plaintext(chunk.chunkSize);
             in.read(reinterpret_cast<char*>(plaintext.data()), chunk.chunkSize);
 
-            // Encrypt AFTER hashing — hash identity stays stable across re-encryption
-            std::vector<unsigned char> ciphertext = crypto::encrypt(plaintext, fileKey);
+            // Compress THEN encrypt (encrypted data doesn't compress)
+            std::vector<unsigned char> compressed = compress::compress(plaintext);
+            std::vector<unsigned char> ciphertext = crypto::encrypt(compressed, fileKey);
 
             sendChunkToNode(primary, chunk.sha256, ciphertext);
-sendChunkToNode(replica, chunk.sha256, ciphertext);
+            sendChunkToNode(replica, chunk.sha256, ciphertext);
 
             placements.push_back({chunk.chunkIndex, chunk.sha256, chunk.chunkSize, primary, replica});
 
             std::cout << "Chunk " << chunk.chunkIndex << " (" << chunk.sha256.substr(0, 8)
-                       << "...) encrypted, -> primary node " << primary << ", replica node " << replica << "\n";
+                       << "...) " << plaintext.size() << "B -> " << compressed.size()
+                       << "B compressed, encrypted, -> primary node " << primary
+                       << ", replica node " << replica << "\n";
         }
 
         saveManifest(fileId, placements, fileKey);
@@ -91,9 +95,9 @@ sendChunkToNode(replica, chunk.sha256, ciphertext);
                 ciphertext = fetchCiphertextFromNode(p.replicaNode, p.hash);
             }
 
-            std::vector<unsigned char> plaintext = crypto::decrypt(ciphertext, fileKey);
+            std::vector<unsigned char> decrypted = crypto::decrypt(ciphertext, fileKey);
+            std::vector<unsigned char> plaintext = compress::decompress(decrypted, p.originalSize);
 
-            // Sanity check: decrypted plaintext should hash back to what the manifest recorded
             std::string actualHash = sha256Hex(plaintext.data(), plaintext.size());
             if (actualHash != p.hash) {
                 throw std::runtime_error("Integrity check failed on chunk " + std::to_string(p.index));
@@ -107,25 +111,22 @@ private:
     std::vector<NodeAddress> nodes_;
     size_t nextNode_ = 0;
 
-    // Note: this now transmits already-encrypted bytes — the "chunk" as far as
-    // the storage node is concerned is just opaque bytes; nodes never see plaintext
-   void sendChunkToNode(size_t nodeIndex, const std::string& hash, const std::vector<unsigned char>& ciphertext) {
-    auto& target = nodes_[nodeIndex];
-    boost::asio::io_context io;
-    tcp::socket socket(io);
-    socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
+    void sendChunkToNode(size_t nodeIndex, const std::string& hash, const std::vector<unsigned char>& ciphertext) {
+        auto& target = nodes_[nodeIndex];
+        boost::asio::io_context io;
+        tcp::socket socket(io);
+        socket.connect(tcp::endpoint(boost::asio::ip::make_address(target.host), target.port));
 
-    std::vector<uint8_t> payload;
-    writeUint32(payload, static_cast<uint32_t>(hash.size()));
-    payload.insert(payload.end(), hash.begin(), hash.end());
-    writeUint64(payload, ciphertext.size());
-    payload.insert(payload.end(), ciphertext.begin(), ciphertext.end());
+        std::vector<uint8_t> payload;
+        writeUint32(payload, static_cast<uint32_t>(hash.size()));
+        payload.insert(payload.end(), hash.begin(), hash.end());
+        writeUint64(payload, ciphertext.size());
+        payload.insert(payload.end(), ciphertext.begin(), ciphertext.end());
 
-    sendMessage(socket, CMD_STORE_CHUNK, payload);
-    receiveMessage(socket);
-}
-    // NOTE: nodes now store ciphertext under the PLAINTEXT hash we tell them,
-    // not a hash they compute themselves — see server.cpp change below
+        sendMessage(socket, CMD_STORE_CHUNK, payload);
+        receiveMessage(socket);
+    }
+
     std::vector<unsigned char> fetchCiphertextFromNode(size_t nodeIndex, const std::string& plaintextHash) {
         auto& target = nodes_[nodeIndex];
         boost::asio::io_context io;
@@ -149,7 +150,7 @@ private:
         j["chunks"] = nlohmann::json::array();
         for (const auto& p : placements) {
             j["chunks"].push_back({
-                {"index", p.index}, {"hash", p.hash}, {"size", p.size},
+                {"index", p.index}, {"hash", p.hash}, {"originalSize", p.originalSize},
                 {"primaryNode", p.primaryNode}, {"replicaNode", p.replicaNode}
             });
         }
@@ -168,7 +169,7 @@ private:
         std::vector<ChunkPlacement> placements;
         for (const auto& c : j["chunks"]) {
             placements.push_back({
-                c["index"].get<uint64_t>(), c["hash"].get<std::string>(), c["size"].get<uint64_t>(),
+                c["index"].get<uint64_t>(), c["hash"].get<std::string>(), c["originalSize"].get<uint64_t>(),
                 c["primaryNode"].get<size_t>(), c["replicaNode"].get<size_t>()
             });
         }
